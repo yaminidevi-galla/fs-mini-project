@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <a class="brand center" href="/">Smart<span>Exam</span></a>
+        <h1>Teacher Registration</h1>
+        <p class="muted">Create your teacher account to manage online examinations.</p>
+
+        <form id="teacherRegisterForm">
+            <label for="name">Teacher Name</label>
+            <input id="name" type="text" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your teacher email" required>
+
+            <label for="department">Department</label>
+            <input id="department" type="text" placeholder="e.g. CSE / AI & ML">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Minimum 6 characters" minlength="6" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" type="password" placeholder="Re-enter your password" minlength="6" required>
+
+            <button class="btn full" type="submit">Register as Teacher</button>
+            <p id="message" class="message"></p>
+        </form>
+
+        <p class="auth-link">Already a teacher? <a href="/login.html">Login</a></p>
+        <p class="auth-link">Are you a student? <a href="/register.html">Student Registration</a></p>
+    </div>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/teacher-register.js"></script>
+</body>
+</html>

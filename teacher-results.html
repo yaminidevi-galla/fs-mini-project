@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Results - SmartExam</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="topbar">
+
+        <a class="brand" href="/teacher-dashboard.html">
+            Smart<span>Exam</span>
+        </a>
+
+        <div class="user-area">
+            <button id="logoutBtn" class="btn small">
+                Logout
+            </button>
+        </div>
+
+    </header>
+
+
+    <main class="simple-page">
+
+        <div class="page-title">
+
+            <div>
+                <p class="eyebrow">PERFORMANCE</p>
+
+                <h1>Exam Results</h1>
+
+                <p>
+                    Select an exam to view student results.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- EXAM LIST -->
+
+        <div id="examList" class="exam-grid"></div>
+
+
+        <!-- RESULTS -->
+
+        <div id="resultsPanel" class="panel hidden">
+
+            <h2 id="resultTitle">
+                Exam Results
+            </h2>
+
+            <div id="resultsTable"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- IMPORTANT: common.js FIRST -->
+
+    <script src="/js/common.js"></script>
+
+    <script src="/js/teacher-results.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+MONGO_URI=mongodb+srv://smartexam_user:SmartExam1229@smartexamcluster.7jbx68o.mongodb.net/?appName=SmartExamCluster
+PORT=3000
+
+JWT_SECRET=SmartExamSecret123

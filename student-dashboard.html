@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+    <header class="topbar">
+        <a class="brand" href="/student-dashboard.html">Smart<span>Exam</span></a>
+        <div class="user-area"><span id="studentName">Student</span><button id="logoutBtn" class="btn small">Logout</button></div>
+    </header>
+
+    <main class="simple-page">
+        <div class="welcome">
+            <div>
+                <p class="eyebrow">STUDENT PANEL</p>
+                <h1>Welcome, <span id="welcomeName">Student</span>!</h1>
+                <p>Choose an available exam and test your knowledge.</p>
+            </div>
+            <div class="welcome-icon">📖</div>
+        </div>
+
+        <div class="page-title">
+            <div><h2>Available Exams</h2><p>Published examinations are shown here.</p></div>
+            <button id="resultsBtn" class="btn outline">My Results</button>
+        </div>
+
+        <div id="examList" class="exam-grid"></div>
+
+        <div id="resultsPanel" class="panel hidden">
+            <h2>My Results</h2>
+            <div id="resultsList"></div>
+        </div>
+    </main>
+
+    <script src="/js/common.js"></script>
+<script src="/js/student-dashboard.js"></script>
+</html>

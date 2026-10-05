@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+    <header class="topbar">
+        <a class="brand" href="/teacher-dashboard.html">Smart<span>Exam</span></a>
+        <div class="user-area"><span id="teacherName">Teacher</span><button id="logoutBtn" class="btn small">Logout</button></div>
+    </header>
+
+    <main class="dashboard">
+        <aside class="sidebar">
+            <a class="active" href="/teacher-dashboard.html">🏠 Dashboard</a>
+            <a href="#createExam">➕ Create Exam</a>
+            <a href="/my-exams.html">📚 My Exams</a>
+            <a href="/teacher-results.html">📊 Results</a>
+        </aside>
+
+        <section class="content">
+            <div class="welcome">
+                <div>
+                    <p class="eyebrow">TEACHER PANEL</p>
+                    <h1>Welcome, <span id="welcomeName">Teacher</span>!</h1>
+                    <p>Create and manage your online examinations.</p>
+                </div>
+                <div class="welcome-icon">🎓</div>
+            </div>
+
+            <div class="quick-grid">
+                <a href="#createExam" class="quick-card blue"><b>➕ Create Exam</b><small>Add a new examination</small></a>
+                <a href="/my-exams.html" class="quick-card purple"><b>📚 My Exams</b><small>View and manage exams</small></a>
+                <a href="/teacher-results.html" class="quick-card green"><b>📊 Results</b><small>Check performance</small></a>
+            </div>
+
+            <div id="createExam" class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Create New Exam</h2>
+                        <p>Fill in the details below to create an exam.</p>
+                    </div>
+                </div>
+
+                <form id="createExamForm" class="form-grid">
+                    <div>
+                        <label>Exam Title *</label>
+                        <input id="title" type="text" placeholder="e.g. Java Programming" required>
+                    </div>
+
+                    <div>
+                        <label>Subject *</label>
+                        <select id="subject" required>
+                            <option value="">Select Subject</option>
+                            <option>Java Programming</option>
+                            <option>Python</option>
+                            <option>Machine Learning</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Data Structures</option>
+                            <option>Database Management</option>
+                            <option>Web Development</option>
+                        </select>
+                    </div>
+
+                    <div class="full-width">
+                        <label>Description *</label>
+                        <textarea id="description" placeholder="Enter exam description..." required></textarea>
+                    </div>
+
+                    <div>
+                        <label>Duration (minutes) *</label>
+                        <input id="duration" type="number" min="1" value="60" required>
+                    </div>
+
+                    <div>
+                        <label>Total Marks *</label>
+                        <input id="totalMarks" type="number" min="1" value="10" required>
+                    </div>
+
+                    <div>
+                        <label>Negative Marks</label>
+                        <input id="negativeMarks" type="number" min="0" step="0.25" value="0">
+                    </div>
+
+                    <div class="full-width center">
+                        <button class="btn create-btn" type="submit">➕ Create Exam</button>
+                    </div>
+                    <p id="examMessage" class="message full-width"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/teacher.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartExam - Online Examination System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .register-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center}
+        .register-box{width:90%;max-width:500px;background:#fff;border-radius:20px;padding:35px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+        .register-box h2{margin-bottom:10px}.register-box p{margin-bottom:25px}
+        .register-options{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+        .register-option{border:none;border-radius:15px;padding:25px 15px;cursor:pointer;font-size:16px;font-weight:600;transition:.2s}
+        .register-option:hover{transform:translateY(-4px)}
+        .student-option{background:#e8f1ff;color:#2563eb}.teacher-option{background:#f3e8ff;color:#7c3aed}
+        .cancel-button{margin-top:20px;border:none;background:transparent;color:#666;cursor:pointer;font-size:15px}
+        @media(max-width:600px){.register-options{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<header class="topbar">
+    <a href="/" class="brand">Smart<span>Exam</span></a>
+    <div class="nav">
+        <a href="/login.html">Login</a>
+        <button type="button" class="btn small" onclick="showRegisterChoice()">Register</button>
+    </div>
+</header>
+
+<main class="landing">
+    <section class="hero">
+        <div>
+            <p class="eyebrow">ONLINE EXAM & QUIZ SYSTEM</p>
+            <h1>Learn. Practice. <span>Achieve.</span></h1>
+            <p class="hero-text">SmartExam helps teachers create online exams and students take tests, view results and improve their performance.</p>
+            <div class="actions">
+                <button type="button" class="btn" onclick="showRegisterChoice()">Get Started</button>
+                <a class="btn outline" href="/login.html">Login</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <div class="mock-title">SmartExam</div>
+            <div class="mock-stat">Online Examination</div>
+            <div class="mock-row"><b>✓</b> Secure student login</div>
+            <div class="mock-row"><b>✓</b> Timed examinations</div>
+            <div class="mock-row"><b>✓</b> Instant results</div>
+        </div>
+    </section>
+</main>
+
+<div id="registerModal" class="register-modal">
+    <div class="register-box">
+        <h2>Choose Registration Type</h2>
+        <p class="muted">Select your account type</p>
+        <div class="register-options">
+            <button type="button" class="register-option student-option" onclick="goToStudentRegistration()">
+                👨‍🎓<br><br>Student Registration
+            </button>
+            <button type="button" class="register-option teacher-option" onclick="goToTeacherRegistration()">
+                👩‍🏫<br><br>Teacher Registration
+            </button>
+        </div>
+        <button type="button" class="cancel-button" onclick="closeRegisterChoice()">Cancel</button>
+    </div>
+</div>
+
+<script>
+function showRegisterChoice(){document.getElementById("registerModal").style.display="flex";}
+function closeRegisterChoice(){document.getElementById("registerModal").style.display="none";}
+function goToStudentRegistration(){window.location.href="/register.html";}
+function goToTeacherRegistration(){window.location.href="/teacher-register.html";}
+document.getElementById("registerModal").addEventListener("click",function(event){if(event.target===this)closeRegisterChoice();});
+</script>
+</body>
+</html>

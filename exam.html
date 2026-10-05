@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Exam - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+    <header class="topbar">
+        <a class="brand" href="/student-dashboard.html">Smart<span>Exam</span></a>
+        <div class="timer">Time: <span id="timer">--:--</span></div>
+    </header>
+
+    <main class="simple-page">
+        <div class="page-title">
+            <div>
+                <p class="eyebrow">ONLINE EXAMINATION</p>
+                <h1 id="examTitle">Exam</h1>
+                <p id="examDescription"></p>
+            </div>
+        </div>
+
+        <form id="examForm">
+            <div id="questions"></div>
+            <button class="btn create-btn" type="submit">Submit Exam</button>
+        </form>
+
+        <p id="message" class="message"></p>
+    </main>
+
+   <script src="/js/common.js"></script>
+<script src="/js/exam.js"></script>
+</body>
+</html>

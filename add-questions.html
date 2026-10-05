@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dashboard-page">
+    <header class="topbar">
+        <a class="brand" href="/teacher-dashboard.html">Smart<span>Exam</span></a>
+        <div class="user-area"><button
+    type="button"
+    id="publishExamBtn"
+    class="btn btn-primary">
+    🚀 Publish Exam
+</button>
+
+<p id="publishMessage" class="message"></p></div>
+    </header>
+
+    <main class="simple-page">
+        <div class="page-title">
+            <div>
+                <p class="eyebrow">QUESTION MANAGEMENT</p>
+                <h1 id="examTitle">Add Questions</h1>
+                <p id="examInfo"></p>
+            </div>
+            <a class="btn outline" href="/my-exams.html">← My Exams</a>
+        </div>
+
+        <div class="panel">
+            <form id="questionForm" class="form-grid">
+                <div class="full-width">
+                    <label>Question *</label>
+                    <textarea id="questionText" placeholder="Enter your question..." required></textarea>
+                </div>
+
+                <div><label>Option A *</label><input id="option0" required></div>
+                <div><label>Option B *</label><input id="option1" required></div>
+                <div><label>Option C *</label><input id="option2" required></div>
+                <div><label>Option D *</label><input id="option3" required></div>
+
+                <div>
+                    <label>Correct Answer *</label>
+                    <select id="correctAnswer" required>
+                        <option value="">Select</option>
+                        <option value="0">A</option>
+                        <option value="1">B</option>
+                        <option value="2">C</option>
+                        <option value="3">D</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Marks</label>
+                    <input id="marks" type="number" min="1" value="1">
+                </div>
+
+                <div class="full-width center">
+                    <button class="btn create-btn" type="submit">Add Question</button>
+                </div>
+                <p id="message" class="message full-width"></p>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Questions Added</h2>
+            <div id="questionList"></div>
+        </div>
+    </main>
+
+    <script src="/js/common.js"></script>
+<script src="/js/add-questions.js"></script>
+</body>
+</html>

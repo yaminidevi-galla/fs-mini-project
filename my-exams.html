@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Exams - SmartExam</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="topbar">
+        <a class="brand" href="/teacher-dashboard.html">
+            Smart<span>Exam</span>
+        </a>
+
+        <div class="user-area">
+            <button id="logoutBtn" class="btn small">
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <main class="simple-page">
+
+        <div class="page-title">
+            <div>
+                <p class="eyebrow">TEACHER PANEL</p>
+
+                <h1>My Exams</h1>
+
+                <p>
+                    View, publish, add questions and manage your exams.
+                </p>
+            </div>
+
+            <a class="btn" href="/teacher-dashboard.html#createExam">
+                + Create New Exam
+            </a>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div id="examList" class="exam-grid"></div>
+
+    </main>
+
+    <!-- IMPORTANT -->
+    <script src="/js/common.js"></script>
+    <script src="/js/my-exams.js"></script>
+
+</body>
+</html>
